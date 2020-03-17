@@ -8,6 +8,7 @@ export const TextField: React.FunctionComponent<Props> = props => {
   const {
     input: { name, onChange, value, ...restInput },
     meta,
+    'data-testid': dataTestId,
     ...rest
   } = props;
 
@@ -25,6 +26,7 @@ export const TextField: React.FunctionComponent<Props> = props => {
       value={value}
       helperText={showError ? meta.error : ''}
       margin="normal"
+      data-testid= {dataTestId}
     />
   );
 };
